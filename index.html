@@ -99,13 +99,43 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
+        var activityInput = document.querySelector("#activity");
+        var saveBtn = document.querySelector("#save");
+        var moment = document.querySelector("#moment");
+        var activity = [];
+
+        init();
+
+
         moment().format('dddd');
-        $(".saveBtn").on("click", function ())
-        {
-            localStorage.setItem("event");
+        // get saved activites from local storage 
+        //parsing string to an object 
+        function init() {
+            var savedActivity = JSON.parse(localStorage).getItem("activity");
+        }
+
+        // stringify and set activity in local storay in activity array 
+        function saveActivity() {
+
+            localStorage.setItem("activity", JSON.stringify(activity));
 
 
         }
+
+        // when an activity is saved 
+        $(".saveBtn").on("click", function (event) {
+            event.preventDefault();
+
+            var activityText = activityInput.value.trim();
+
+        })
+
+        //add new activity to activity array 
+        activity.push(activityText);
+        activityInput.value = "";
+
+
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
