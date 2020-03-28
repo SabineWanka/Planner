@@ -1,5 +1,7 @@
 # Day Planner 
 
+![image](https://user-images.githubusercontent.com/55050594/77820188-ac10f880-70e0-11ea-9d20-ff90e88da6a2.png)
+
 A simple calendar application that allows the user to save events for each hour of the day. This app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 The app displays standard business hours (9 a.m. to 5 p.m.). Each time slot should represent one hour and contain the following:
